@@ -144,9 +144,38 @@ class ComponentInstaller implements
      */
     public function activate(Composer $composer, IOInterface $io)
     {
+        //$installer = new TemplateInstaller($io, $composer);
+        //$composer->getInstallationManager()->addInstaller($installer);
+
         $this->composer        = $composer;
         $this->io              = $io;
         $this->cachedInjectors = [];
+    }
+
+    /**
+     * Deactivate plugin.
+     *
+     * Deactivates a plugin.
+     *
+     * @param Composer $composer
+     * @param IOInterface $io
+     * @return void
+     */
+    public function deactivate(Composer $composer, IOInterface $io)
+    {
+    }
+
+    /**
+     * Uninstall plugin.
+     *
+     * Uninstalls a plugin.
+     *
+     * @param Composer $composer
+     * @param IOInterface $io
+     * @return void
+     */
+    public function uninstall(Composer $composer, IOInterface $io)
+    {
     }
 
     /**
