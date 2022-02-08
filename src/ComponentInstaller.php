@@ -144,9 +144,6 @@ class ComponentInstaller implements
      */
     public function activate(Composer $composer, IOInterface $io)
     {
-        //$installer = new TemplateInstaller($io, $composer);
-        //$composer->getInstallationManager()->addInstaller($installer);
-
         $this->composer        = $composer;
         $this->io              = $io;
         $this->cachedInjectors = [];
